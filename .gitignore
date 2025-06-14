@@ -10,3 +10,5 @@
 /ImageApp/obj
 /.vs
 /ImageApp.API/ImageApp/ImageApp.API/bin/Debug/net8.0
+/BackendLib/bin/Debug/net8.0
+/BackendLib/obj

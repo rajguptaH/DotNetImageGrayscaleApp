@@ -1,20 +1,24 @@
-<Window x:Class="ImageConversionApp.UI.MainWindow"
+<Window x:Class="ImageApp.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ImageConversionApp.UI"
+        xmlns:vm="clr-namespace:ImageApp.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="ImageApp" Height="450" Width="800">
+    <Window.DataContext>
+        <vm:MainViewModel />
+    </Window.DataContext>
+
     <Grid Margin="10">
         <StackPanel>
             <TextBlock Text="DIGITAL IMAGING APPLICATION" FontSize="20" FontWeight="Bold" 
                        HorizontalAlignment="Center" Margin="0,10" />
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
-                <Button Name="BtnClose" Content="CLOSE" Width="75" Margin="10" Click="BtnClose_Click"/>
-                <Button Name="BtnOpen" Content="OPEN" Width="75" Margin="10" Click="BtnOpen_Click"/>
-                <Button Name="BtnConvert" Content="CONVERT" Width="100" Margin="10" Click="BtnConvert_Click"/>
+                <Button Content="CLOSE" Width="75" Margin="10" Command="{Binding CloseAppCommand}" />
+                <Button Content="OPEN" Width="75" Margin="10" Command="{Binding OpenImageCommand}"/>
+                <Button Content="CONVERT" Width="100" Margin="10" Command="{Binding ConvertImageCommand}"/>
             </StackPanel>
 
             <Grid Margin="0,10">
@@ -24,13 +28,13 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Image Name="ColoredImage" Grid.Column="0" Height="200" Width="250" Stretch="Uniform"/>
+                <Image Source="{Binding ColoredImage}" Grid.Column="0" Height="200" Width="250" Stretch="Uniform"/>
                 <TextBlock Text="PROCESS OF CHANGING COLOR OF IMAGE" Grid.Column="1" 
                            VerticalAlignment="Center" Margin="20,0"/>
-                <Image x:Name="BWImage" Grid.Column="2" Height="200" Width="250" Stretch="Uniform"/>
+                <Image Source="{Binding BWImage}" Grid.Column="2" Height="200" Width="250" Stretch="Uniform"/>
             </Grid>
 
-            <ProgressBar Name="ProgressBar" Height="30" Minimum="0" Maximum="100" Margin="0,20"/>
+            <ProgressBar Value="{Binding Progress}" Height="30" Minimum="0" Maximum="100" Margin="0,20"/>
         </StackPanel>
     </Grid>
 </Window>

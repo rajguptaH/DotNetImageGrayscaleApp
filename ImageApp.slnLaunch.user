@@ -3,10 +3,6 @@
     "Name": "START-TOG",
     "Projects": [
       {
-        "Path": "ImageApp.API\\ImageApp.API.csproj",
-        "Action": "Start"
-      },
-      {
         "Path": "ImageApp\\ImageApp.csproj",
         "Action": "Start"
       }

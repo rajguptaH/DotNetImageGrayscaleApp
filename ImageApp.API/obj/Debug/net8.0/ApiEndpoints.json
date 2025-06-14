@@ -1,0 +1,12 @@
+[
+  {
+    "ContainingType": "ImageApp.API.Controllers.ImageController",
+    "Method": "ConvertToGrayscale",
+    "RelativePath": "Image/grayscale",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

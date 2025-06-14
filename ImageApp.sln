@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36203.30 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageApp.API", "ImageApp.API\ImageApp.API.csproj", "{F078D1F1-8EDD-49F1-9973-15D7E8EDDFB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageApp", "ImageApp\ImageApp.csproj", "{39252A24-390B-0CEC-4C8B-B280FF1B9DF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{75C0B8B0-1C86-0A53-A29A-8249C84A82B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F078D1F1-8EDD-49F1-9973-15D7E8EDDFB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F078D1F1-8EDD-49F1-9973-15D7E8EDDFB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F078D1F1-8EDD-49F1-9973-15D7E8EDDFB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F078D1F1-8EDD-49F1-9973-15D7E8EDDFB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39252A24-390B-0CEC-4C8B-B280FF1B9DF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39252A24-390B-0CEC-4C8B-B280FF1B9DF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39252A24-390B-0CEC-4C8B-B280FF1B9DF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39252A24-390B-0CEC-4C8B-B280FF1B9DF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75C0B8B0-1C86-0A53-A29A-8249C84A82B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75C0B8B0-1C86-0A53-A29A-8249C84A82B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75C0B8B0-1C86-0A53-A29A-8249C84A82B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75C0B8B0-1C86-0A53-A29A-8249C84A82B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2AD31F44-7B20-497C-ABC2-C8698E351202}
+	EndGlobalSection
+EndGlobal

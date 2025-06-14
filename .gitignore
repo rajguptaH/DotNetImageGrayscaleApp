@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/ImageApp.API/ImageApp/ImageApp.API/obj
+/Tests/obj
+/Tests/bin/Debug/net8.0
+/ImageApp.API/ImageApp/.vs/ImageApp
+/ImageApp/bin/Debug/net8.0-windows
+/ImageApp/obj
+/.vs
+/ImageApp.API/ImageApp/ImageApp.API/bin/Debug/net8.0

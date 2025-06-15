@@ -4,7 +4,7 @@ using System.IO;
 
 namespace UnitTests
 {
-    public class LoggerTests
+    public class ConversionWithLoggerTests
     {
         [Test]
         public void Log_WritesToFile()
@@ -12,7 +12,7 @@ namespace UnitTests
             string testMessage = "Test log message";
             Logger.Log(testMessage);
 
-            string content = File.ReadAllText("log.txt");
+            string content = File.ReadAllText("conversion.log");
             Assert.IsTrue(content.Contains(testMessage));
         }
     }

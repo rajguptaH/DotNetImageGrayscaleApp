@@ -19,7 +19,7 @@ namespace ImageApp.Commands
             _vm = vm;
         }
 
-        public bool CanExecute(object parameter) => _vm.ColoredImage != null;
+        public bool CanExecute(object parameter) => true;
 
         public async void Execute(object parameter)
         {
@@ -27,7 +27,6 @@ namespace ImageApp.Commands
             {
                 _vm.Progress = 10;
 
-                // Load backend dynamically
                 var asm = Assembly.LoadFrom("BackendLib.dll");
                 var type = asm.GetType("BackendLib.ImageProcessor");
                 dynamic processor = Activator.CreateInstance(type);

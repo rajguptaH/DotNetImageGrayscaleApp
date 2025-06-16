@@ -10,7 +10,5 @@ namespace ImageApp
             InitializeComponent();
             DataContext = new MainViewModel();
         }
-
-      
     }
 }

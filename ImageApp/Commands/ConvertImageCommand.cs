@@ -21,7 +21,12 @@ namespace ImageApp.Commands
 
         public bool CanExecute(object parameter) => true;
 
-        public async void Execute(object parameter)
+        public void Execute(object parameter)
+        {
+            _ = ExecuteAsync(); 
+        }
+
+        private async Task ExecuteAsync()
         {
             try
             {
@@ -35,17 +40,16 @@ namespace ImageApp.Commands
                 BitmapEncoder encoder = new BmpBitmapEncoder();
                 encoder.Frames.Add(BitmapFrame.Create(_vm.ColoredImage));
                 encoder.Save(ms);
-
-                Bitmap bmp = new Bitmap(ms);
+                using var bmp = new Bitmap(ms);
 
                 var result = await Task.Run(() => processor.ConvertToGrayscale(bmp));
-                _vm.BWImage = MainViewModel.ConvertToBitmapImage(result);
 
+                _vm.BWImage = MainViewModel.ConvertToBitmapImage(result);
                 _vm.Progress = 100;
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}");
+                MessageBox.Show($"Error during conversion: {ex.Message}", "Conversion Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

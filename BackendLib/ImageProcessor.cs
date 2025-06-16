@@ -5,11 +5,18 @@ using System.Runtime.Versioning;
 namespace BackendLib
 {
     [SupportedOSPlatform("windows")]
-    public class ImageProcessor : IImageProcessor
+    public class ImageProcessor 
     {
         public Bitmap ConvertToGrayscale(Bitmap input, IProgress<int> progress = null)
         {
             Logger.Log("User requested image conversion.");
+
+            if (input == null)
+            {
+                Logger.Log("Input bitmap is null.");
+                return null;
+            }
+
             Bitmap output = new Bitmap(input.Width, input.Height);
 
             for (int y = 0; y < input.Height; y++)

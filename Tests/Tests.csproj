@@ -1,16 +1,21 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <IsPackable>false</IsPackable>
+    <TargetFramework>net8.0-windows</TargetFramework>
+	  <UseWPF>true</UseWPF>
+    <IsPackable>true</IsPackable>
   </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="Moq" Version="4.20.72" />
-    <PackageReference Include="NUnit" Version="3.13.3" />
-    <PackageReference Include="NUnit3TestAdapter" Version="4.2.1" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.1" />
-    <PackageReference Include="System.Drawing.Common" Version="9.0.6" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BackendLib\BackendLib.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\BackendLib\BackendLib.csproj" />
+		<ProjectReference Include="..\ImageApp\ImageApp.csproj" />
+		<PackageReference Include="coverlet.collector" Version="6.0.4">
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+			<PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.CodeCoverage" Version="17.14.1" />
+		<PackageReference Include="Moq" Version="4.20.72" />
+		<PackageReference Include="NUnit" Version="3.13.3" />
+		<PackageReference Include="NUnit3TestAdapter" Version="4.2.1" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.1" />
+		<PackageReference Include="System.Drawing.Common" Version="9.0.6" />
+	</ItemGroup>
 </Project>

@@ -10,6 +10,7 @@ using BackendLib;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System;
+using Image.API.Services;
 
 namespace DotNetImageGrayscaleApp.Tests
 {

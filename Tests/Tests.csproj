@@ -5,7 +5,7 @@
     <IsPackable>true</IsPackable>
   </PropertyGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\BackendLib\BackendLib.csproj" />
+		<ProjectReference Include="..\Image.API\Image.API.csproj" />
 		<ProjectReference Include="..\ImageApp\ImageApp.csproj" />
 		<PackageReference Include="coverlet.collector" Version="6.0.4">
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

@@ -1,11 +1,6 @@
-﻿using BackendLib;
+﻿using Image.API.Services;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Tests
 {

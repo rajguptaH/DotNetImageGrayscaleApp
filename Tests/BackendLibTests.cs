@@ -1,4 +1,5 @@
-﻿using BackendLib;
+﻿using Image.API;
+using Image.API.Services;
 using NUnit.Framework;
 using System.Drawing;
 

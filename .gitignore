@@ -13,3 +13,5 @@
 /BackendLib/bin/Debug/net8.0
 /BackendLib/obj
 /Tests/bin
+/Image.API/obj
+/Image.API/bin/Debug/net8.0

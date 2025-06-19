@@ -5,6 +5,10 @@
       {
         "Path": "ImageApp\\ImageApp.csproj",
         "Action": "Start"
+      },
+      {
+        "Path": "Image.API\\Image.API.csproj",
+        "Action": "Start"
       }
     ]
   }

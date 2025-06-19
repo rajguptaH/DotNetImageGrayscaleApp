@@ -3,22 +3,18 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:vm="clr-namespace:ImageApp.ViewModels"
+        xmlns:local="clr-namespace:ImageApp"
         mc:Ignorable="d"
-        Title="ImageApp" Height="450" Width="800">
-    <Window.DataContext>
-        <vm:MainViewModel />
-    </Window.DataContext>
-
+        Title="MainWindow" Height="450" Width="800">
     <Grid Margin="10">
         <StackPanel>
             <TextBlock Text="DIGITAL IMAGING APPLICATION" FontSize="20" FontWeight="Bold" 
                        HorizontalAlignment="Center" Margin="0,10" />
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
-                <Button Content="CLOSE" Width="75" Margin="10" Command="{Binding CloseAppCommand}" />
-                <Button Content="OPEN" Width="75" Margin="10" Command="{Binding OpenImageCommand}"/>
-                <Button Content="CONVERT" Width="100" Margin="10" Command="{Binding ConvertImageCommand}"/>
+                <Button Name="BtnClose" Content="CLOSE" Width="75" Margin="10" Click="BtnClose_Click"/>
+                <Button Name="BtnOpen" Content="OPEN" Width="75" Margin="10" Click="BtnOpen_Click"/>
+                <Button Name="BtnConvert" Content="CONVERT" Width="100" Margin="10" Click="BtnConvert_Click"/>
             </StackPanel>
 
             <Grid Margin="0,10">
@@ -28,13 +24,13 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Image x:Name="ColoredImage" Source="{Binding ColoredImage}" Grid.Column="0" Height="200" Width="250" Stretch="Uniform"/>
+                <Image Name="ColoredImage" Grid.Column="0" Height="200" Width="250" Stretch="Uniform"/>
                 <TextBlock Text="PROCESS OF CHANGING COLOR OF IMAGE" Grid.Column="1" 
                            VerticalAlignment="Center" Margin="20,0"/>
-                <Image x:Name="BWImage" Source="{Binding BWImage}" Grid.Column="2" Height="200" Width="250" Stretch="Uniform"/>
+                <Image x:Name="BWImage" Grid.Column="2" Height="200" Width="250" Stretch="Uniform"/>
             </Grid>
 
-            <ProgressBar x:Name="ProgressBar" Value="{Binding Progress}" Height="30" Minimum="0" Maximum="100" Margin="0,20"/>
+            <ProgressBar Name="ProgressBar" Height="30" Minimum="0" Maximum="100" Margin="0,20"/>
         </StackPanel>
     </Grid>
 </Window>
